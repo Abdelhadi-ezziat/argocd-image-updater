@@ -54,7 +54,7 @@ pipeline {
                     git config --global user.email "ezziat.abdelhadi@gmail.com"
                     git add deployment.yaml
                     git commit -m "Updated deployment manifest"
-                    git remote set-url origin https://$GITHUB_TOKEN@github.com/yourusername/yourrepository.git
+                    git remote set-url origin https://$GITHUB_TOKEN@github.com/Abdelhadi-ezziat/argocd-image-updater.git
                     git push origin main
                 """
                 // git -c http.sslVerify=false push https://Abdelhadi-ezziat:<token>@github.com/Abdelhadi-ezziat/gitops-argocd-image-updater.git main
