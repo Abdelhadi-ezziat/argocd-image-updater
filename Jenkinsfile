@@ -5,7 +5,7 @@ pipeline {
 
     environment {
         APP_NAME = "complete-devops-pipeline"
-        GITHUB_TOKEN = credentials('github')
+        GITHUB_TOKEN = credentials('github-token')
     }
 
     stages {
@@ -55,7 +55,7 @@ pipeline {
                     git add deployment.yaml
                     git commit -m "Updated deployment manifest"
                     echo "$GITHUB_TOKEN"
-                    git remote set-url origin https://$GITHUB_TOKEN@github.com/Abdelhadi-ezziat/argocd-image-updater.git
+                    git remote set-url origin https://Abdelhadi-ezziat:$GITHUB_TOKEN@github.com/Abdelhadi-ezziat/argocd-image-updater.git
                     git push origin main
                 """
                 // git -c http.sslVerify=false push https://Abdelhadi-ezziat:<token>@github.com/Abdelhadi-ezziat/gitops-argocd-image-updater.git main
