@@ -57,7 +57,7 @@ pipeline {
                     git remote set-url origin https://$GITHUB_TOKEN@github.com/yourusername/yourrepository.git
                     git push origin main
                 """
-                // git -c http.sslVerify=false push https://Abdelhadi-ezziat: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@github.com/Abdelhadi-ezziat/gitops-argocd-image-updater.git main
+                // git -c http.sslVerify=false push https://Abdelhadi-ezziat:<token>@github.com/Abdelhadi-ezziat/gitops-argocd-image-updater.git main
                 // git push https://abdelhadi-ezziat:${github-token}@github.com/Abdelhadi-ezziat/gitops-argocd-image-updater main
                 // withCredentials{[gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]} {
                 //     sh "git push https://github.com/Abdelhadi-ezziat/gitops-argocd-image-updater.git main"
